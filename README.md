@@ -37,9 +37,26 @@ After deciding the features with which to work, it was time to gather some data 
 15. Blue.
 
 Due to some different responses in the API, the data collected was not uniform, i.e., some genres have way more instances than others.
-The resulting dataset can be summarized as in the figure below.
+The resulting dataset can be summarized as below.
 
-<img src="https://github.com/lucasbflopes/spotify-api-track-classification/blob/master/dataset/dataset_view.png?raw=true" width="150" align="middle">
+Genre/Category | # of instances
+------------ | -------------
+Classical | 2983
+Latin | 2633
+Metal | 2238
+Indie Alt | 1793
+Romance | 1568
+Rock | 1503
+Jazz | 1481
+Hiphop | 1174
+Party | 1030
+Funk | 906
+Country | 890
+Pop | 865
+Reggae | 649
+Blues | 596
+Punk | 419
+
 
 The machine learning algorithms selected to attack the aforementioned classification problem were:
 
@@ -49,9 +66,7 @@ The machine learning algorithms selected to attack the aforementioned classifica
 
 The [Scikit-Learn library](http://scikit-learn.org/stable/) was used for pre-processing the dataset as well as implementing said algorithms. 
 
-After analyzing the cross validation error for each algorithm, in addition to performing a grid search to find the best suited hyperparameters, the SVM method was deemed as the best one, with an average score of **0.51** (percentage of correctly classified instances on the validation set). By looking at its learning curve, it is clear that the algorithm is still underfitting, thus it would benefit from more complex features other than the current set.
-
-<img src="https://github.com/lucasbflopes/spotify-api-track-classification/blob/master/model-selection/learning-curves/svc-learningCurve.pdf"/>
+After analyzing the cross validation error for each algorithm, in addition to performing a grid search to find the best suited hyperparameters, the SVM method was deemed as the best one, with an average score of **0.51** (percentage of correctly classified instances on the validation set). By looking at its [learning curve](https://github.com/lucasbflopes/spotify-track-classifier/blob/master/model-selection/learning-curves/svc-learningCurve.pdf), it is clear that the algorithm is still underfitting, thus it would benefit from more complex features other than the current set.
 
 <h3> How to run </h3>
 
