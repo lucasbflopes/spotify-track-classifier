@@ -42,4 +42,6 @@ lr_pol = Pipeline([
 # print(grid_search.best_params_) # --> 200
 
 lr_pol.fit(X_train, y_train)
-print("Cross validation mean score: ", cross_val_score(lr_pol, X_train, y_train, cv=5).mean())
+#print("Cross validation mean score: ", cross_val_score(lr_pol, X_train, y_train, cv=5).mean())
+
+print("Testing set score: ", lr_pol.score(X_test, y_test))

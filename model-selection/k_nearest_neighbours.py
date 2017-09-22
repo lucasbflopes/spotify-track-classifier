@@ -28,5 +28,8 @@ knn = Pipeline([
 	])
 
 knn.fit(X_train, y_train)
-print("Cross validation mean score: ", cross_val_score(knn, X_train, y_train, cv=5).mean())
+#print("Cross validation mean score: ", cross_val_score(knn, X_train, y_train, cv=5).mean())
+
+print("Testing set score: ", knn.score(X_test, y_test))
+
 

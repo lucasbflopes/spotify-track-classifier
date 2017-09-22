@@ -36,6 +36,8 @@ svc = Pipeline([
 # grid_search.fit(X_train, y_train)
 # print(grid_search.best_params_)
 
+#print("Testing set score: ", svc.score(X_test, y_test))
+
 svc.fit(X, y)
 
 with open('../model_trained.pkl', 'wb') as fout:
